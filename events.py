@@ -16,13 +16,13 @@ def happy():
         "The first item sold on eBay was a broken laser pointer."
     ]
     engine = pyttsx3.init()
-    str = facts[randint(0, 10)]
+    str = "Fact: " + facts[randint(0, 9)]
     engine.say(str)
     print(str)
     engine.runAndWait()
 
 def sad():
-    playsound('I-Was-Always-Right-Here.mp3')
+    playsound('piano_music.mp3')
 
 def neutral():
     quotes = [
@@ -38,7 +38,7 @@ def neutral():
         "Not how long, but how well you have lived is the main thing. — Seneca"
     ]
     engine = pyttsx3.init()
-    str = quotes[randint(0, 10)]
+    str = "Life Quote: " + quotes[randint(0, 9)]
     engine.say(str)
     print(str)
     engine.runAndWait()
@@ -57,7 +57,7 @@ def angry():
         'What kind of dog does Dracula have? A bloodhound!'
     ]
     engine = pyttsx3.init()
-    str = jokes[randint(0, 10)]
+    str = "Joke: " + jokes[randint(0, 9)]
     engine.say(str)
     print(str)
     engine.runAndWait()
