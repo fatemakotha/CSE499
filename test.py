@@ -11,6 +11,7 @@ from keras.preprocessing.image import img_to_array
 from keras.preprocessing import image
 import cv2
 import numpy as np
+from events import *
 
 face_classifier = cv2.CascadeClassifier('./haarcascade_frontalface_default.xml')
 classifier =load_model('./Emotion_Detection.h5')
@@ -48,6 +49,16 @@ while True:
             print("\nlabel = ",label)
             label_position = (x,y)
             cv2.putText(frame,label,label_position,cv2.FONT_HERSHEY_SIMPLEX,2,(0,255,0),3)
+            if label == 'Angry':
+                angry()
+            elif label == 'Happy':
+                happy()
+            elif label == 'Neutral':
+                neutral()
+            elif label == 'Sad':
+                sad()
+            elif label == 'Surprise':
+                surprise()
         else:
             cv2.putText(frame,'No Face Found',(20,60),cv2.FONT_HERSHEY_SIMPLEX,2,(0,255,0),3)
         print("\n\n")

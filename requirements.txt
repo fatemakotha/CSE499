@@ -39,3 +39,5 @@ urllib3==1.26.4
 Werkzeug==1.0.1
 wrapt==1.12.1
 zipp==3.4.1
+pyttsx3==2.90
+playsound==1.2.2
